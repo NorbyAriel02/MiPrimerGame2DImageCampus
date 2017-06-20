@@ -1,19 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour {
 	public bool HasKey = false;
-	// Use this for initialization
+	public Image[] ImgInvetoryWeapons;
 
 	//private varible
 	private Dictionary<string, int> Inventory; 
-
+	private PlayerAttack02 Attack01;
+	private PlayerAttack Attack02;
 	void Awake()
 	{
 		Inventory =  new Dictionary<string, int>();
 		Inventory.Add("key", 0);
-		Inventory.Add("weapon02", 0);
+		Inventory.Add("weapon02", 1);
+		ImgInvetoryWeapons [1].color = new Color (0, 0, 0, 0);
+		GameObject GO = GameObject.FindGameObjectWithTag ("Player");
+		//pequeño error al crear los scripts inverti los numeros
+		Attack01 = GO.GetComponent<PlayerAttack02> ();
+		Attack02 = GO.GetComponent<PlayerAttack> ();
 	}
 
 	void Start () {
@@ -22,11 +29,11 @@ public class PlayerInventory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Alpha1))
-			Debug.Log("Funciona");
+		if (Input.GetKeyDown (KeyCode.Alpha1))
+			SelectWeapon01 ();
 
 		if (Input.GetKeyDown (KeyCode.Alpha2))
-			Debug.Log ("");
+			SelectWepon02 ();
 	}
 
 	public void SetElement(string nameKey, int value)
@@ -47,14 +54,20 @@ public class PlayerInventory : MonoBehaviour {
 
 	void SelectWeapon01()
 	{
-		
+		ImgInvetoryWeapons [0].color = new Color (0, 0, 0, 1);
+		ImgInvetoryWeapons [1].color = new Color (0, 0, 0, 0);
+		Attack02.enabled = false;
+		Attack01.enabled = true;
 	}
 
 	void SelectWepon02()
 	{
-		if (GetElemnt ("weapon02"))
+		if (GetElemnt ("weapon02") <= 0)
 			return;
 
-
+		Attack01.enabled = false;
+		Attack02.enabled = true;
+		ImgInvetoryWeapons [0].color = new Color (0, 0, 0, 0);
+		ImgInvetoryWeapons [1].color = new Color (0, 0, 0, 1);
 	}
 }
