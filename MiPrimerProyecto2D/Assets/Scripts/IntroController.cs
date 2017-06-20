@@ -10,14 +10,14 @@ public class IntroController : MonoBehaviour {
 	private Vector3 FromPos;
 	private Vector3 ToPos;
 	private Vector3 FinalPos;
-	private float[,] matrixCartel;
+	//private float[,] matrixCartel;
 	private GameObject cloneBrick = null;
 	private float Acumulador = 0;
 	void Awake()
 	{
 		FromPos = new Vector3 (10, 10, 0);
 		ToPos = new Vector3 (-5, 4, 0);
-		matrixCartel = new float[55, 25];
+		//matrixCartel = new float[55, 25];
 	}
 
 	void Update () {		

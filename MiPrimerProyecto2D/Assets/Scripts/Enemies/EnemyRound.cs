@@ -16,7 +16,6 @@ public class EnemyRound : MonoBehaviour {
 	private bool flip = false;
 	private Animator EnemyAnim;
 	private bool HastaArreglarAnim = true;
-	private SpriteRenderer EnemySP;
 	private EnemyFlip enemyFlip;
 	void Awake()
 	{
@@ -28,7 +27,6 @@ public class EnemyRound : MonoBehaviour {
 
 		timer = 0.0f;
 		//EnemyAnim = GetComponentInChildren<Animator> ();	
-		EnemySP = GetComponent<SpriteRenderer> ();
 		enemyFlip = GetComponent<EnemyFlip> ();
 	}
 

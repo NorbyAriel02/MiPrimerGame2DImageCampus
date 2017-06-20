@@ -8,7 +8,6 @@ public class StairsController : MonoBehaviour {
 	public Vector3 FromPos;
 	public Vector3 ToPos;
 	public Vector3 FinalPos;
-	private float stay = 0;
 	void OnTriggerStay2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Player" && Input.GetKey(KeyCode.UpArrow)) {

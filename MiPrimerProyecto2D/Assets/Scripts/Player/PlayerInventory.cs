@@ -13,7 +13,7 @@ public class PlayerInventory : MonoBehaviour {
 	{
 		Inventory =  new Dictionary<string, int>();
 		Inventory.Add("key", 0);
-		Inventory.Add("Weapon02", 0);
+		Inventory.Add("weapon02", 0);
 	}
 
 	void Start () {
@@ -22,15 +22,11 @@ public class PlayerInventory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+		if(Input.GetKeyDown(KeyCode.Alpha1))
+			Debug.Log("Funciona");
 
-	void OnCollisionEnter2D(Collision2D other)
-	{
-		if (other.gameObject.tag == "key") {
-			Destroy (other.gameObject);
-			HasKey = true;
-		}
+		if (Input.GetKeyDown (KeyCode.Alpha2))
+			Debug.Log ("");
 	}
 
 	public void SetElement(string nameKey, int value)
@@ -49,4 +45,16 @@ public class PlayerInventory : MonoBehaviour {
 		return Inventory[nameKey];
 	}
 
+	void SelectWeapon01()
+	{
+		
+	}
+
+	void SelectWepon02()
+	{
+		if (GetElemnt ("weapon02"))
+			return;
+
+
+	}
 }

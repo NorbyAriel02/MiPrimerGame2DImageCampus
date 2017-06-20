@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour {
-	public Sprite DoorOpen;
+public class KeyController : MonoBehaviour {
 	private PlayerInventory Inventory;
+	// Use this for initialization
 	void Awake () {
 		GameObject go = GameObject.FindGameObjectWithTag ("Player");
 		Inventory = go.GetComponent<PlayerInventory> ();
@@ -17,13 +17,10 @@ public class DoorController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.tag == "Player") {			
-			if (Inventory.GetElemnt("key") > 0) {
-				gameObject.GetComponent<SpriteRenderer> ().sprite = DoorOpen;
-				gameObject.GetComponent<BoxCollider2D> ().isTrigger = true;
-				Inventory.SetElement ("key", -1);
-				this.enabled = false;	
-			}
+		if (other.gameObject.tag == "Player") {
+			Destroy (gameObject);
+			Inventory.HasKey = true;
+			Inventory.SetElement ("key", 1);
 		}
 	}
 }

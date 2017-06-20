@@ -7,10 +7,10 @@ public class EnemyHealth : MonoBehaviour {
 	public GameObject gameController;
 	//variable private
 	private HUDcontroller hud;
-	private Animator Anim;
+	//private Animator Anim;
 	void Awake()
 	{
-		Anim = GetComponent<Animator> ();
+		//Anim = GetComponent<Animator> ();
 		hud = gameController.GetComponent<HUDcontroller>();
 	}
 
