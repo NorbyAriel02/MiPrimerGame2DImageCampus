@@ -6,7 +6,7 @@ public class EnemyRound : MonoBehaviour {
 	public float rangeRound;
 	public float resetRound;
 	public float SmoothLerp;
-
+	public bool off = false;
 	//Variables Privadas
 	public Transform SpawnProjectile;
 	private Vector3 FromPos;
@@ -32,6 +32,9 @@ public class EnemyRound : MonoBehaviour {
 
 	void Update () 
 	{
+		if (off)
+			return;
+
 		move ();
 	}
 

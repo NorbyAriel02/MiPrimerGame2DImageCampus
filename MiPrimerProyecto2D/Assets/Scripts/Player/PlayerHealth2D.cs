@@ -19,6 +19,7 @@ public class PlayerHealth2D : MonoBehaviour {
 
 	public void TakeDamage(float danger)
 	{
+		hud.damaged = true;
 		Health -= danger;
 		hud.SetHealth(Health/100);
 		if (Health > 0) {

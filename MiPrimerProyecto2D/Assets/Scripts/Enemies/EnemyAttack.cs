@@ -12,11 +12,13 @@ public class EnemyAttack : MonoBehaviour {
 	public float timer;
 	public float AttackDistance = 15;
 	public float timeBetweenBullets = 2;
+	public bool off = false;
 	//Private Variables
 	private SpriteRenderer EnemySR;
 	private GameObject Player;
 	private Transform target;
 	private EnemyFlip enemyFlip;
+
 	void Awake()
 	{
 		Player = GameObject.FindGameObjectWithTag ("Player");
@@ -33,6 +35,9 @@ public class EnemyAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (off)
+			return;
+
 		timer -= Time.deltaTime;
 		Vector3 dir = target.position - transform.position;
 		dir.z = 0.0f;

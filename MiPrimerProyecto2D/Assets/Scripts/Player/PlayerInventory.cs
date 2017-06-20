@@ -15,7 +15,7 @@ public class PlayerInventory : MonoBehaviour {
 	{
 		Inventory =  new Dictionary<string, int>();
 		Inventory.Add("key", 0);
-		Inventory.Add("weapon02", 1);
+		Inventory.Add("weapon02", 0);
 		ImgInvetoryWeapons [1].color = new Color (0, 0, 0, 0);
 		GameObject GO = GameObject.FindGameObjectWithTag ("Player");
 		//pequeño error al crear los scripts inverti los numeros
@@ -54,8 +54,7 @@ public class PlayerInventory : MonoBehaviour {
 
 	void SelectWeapon01()
 	{
-		ImgInvetoryWeapons [0].color = new Color (0, 0, 0, 1);
-		ImgInvetoryWeapons [1].color = new Color (0, 0, 0, 0);
+		ImgInvetoryWeapons [2].transform.position = ImgInvetoryWeapons [0].transform.position;
 		Attack02.enabled = false;
 		Attack01.enabled = true;
 	}
@@ -67,7 +66,11 @@ public class PlayerInventory : MonoBehaviour {
 
 		Attack01.enabled = false;
 		Attack02.enabled = true;
-		ImgInvetoryWeapons [0].color = new Color (0, 0, 0, 0);
+		ImgInvetoryWeapons [2].transform.position = ImgInvetoryWeapons [1].transform.position;
+	}
+
+	public void ShowWeapon02()
+	{
 		ImgInvetoryWeapons [1].color = new Color (0, 0, 0, 1);
 	}
 }

@@ -9,7 +9,17 @@ public class HUDcontroller : MonoBehaviour {
 	public Text BulletsText;
 	public Text ScoreText;
 	public Text TimeText;
-	public Scrollbar HealthBar;
+	public Slider HealthBar;
+	public Image damageImage;
+	public bool damaged = false;
+	public float flashSpeed = 5f;
+	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+
+	void Update()
+	{
+		ShowDanger ();
+	}
+
 
 	public void SetBullets(float bullets)
 	{		
@@ -55,5 +65,18 @@ public class HUDcontroller : MonoBehaviour {
 	{
 		string[] time = TimeText.text.Split(':');
 		return float.Parse(time [1]);
+	}
+
+	public void ShowDanger()
+	{
+		if(damaged)
+		{
+			damageImage.color = flashColour;
+		}
+		else
+		{
+			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+		}
+		damaged = false;
 	}
 }

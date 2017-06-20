@@ -18,6 +18,12 @@ public class GameController : MonoBehaviour {
 
 	public void gameOver()
 	{
-		SceneManager.LoadScene ("Nivel01");
+		SceneManager.LoadScene ("GameOver");
+	}
+
+	void OnCollisionStay2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Player")
+			SceneManager.LoadScene ("Win");
 	}
 }

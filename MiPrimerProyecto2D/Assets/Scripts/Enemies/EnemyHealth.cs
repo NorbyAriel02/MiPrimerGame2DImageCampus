@@ -7,11 +7,14 @@ public class EnemyHealth : MonoBehaviour {
 	public GameObject gameController;
 	//variable private
 	private HUDcontroller hud;
+	private DroppedObject Drop;
+
 	//private Animator Anim;
 	void Awake()
 	{
 		//Anim = GetComponent<Animator> ();
 		hud = gameController.GetComponent<HUDcontroller>();
+		Drop = GetComponent<DroppedObject> ();
 	}
 
 	public void TakeDamage(float danger)
@@ -25,8 +28,10 @@ public class EnemyHealth : MonoBehaviour {
 		{
 			//Anim.SetTrigger ("IsDie");
 			//gameObject.GetComponent<BoxCollider2D> ().isTrigger = true;
-			gameObject.GetComponent<EnemyRound> ().enabled = false;
-			gameObject.GetComponent<EnemyAttack> ().enabled = false;
+			gameObject.GetComponent<EnemyRound> ().off = true;
+			gameObject.GetComponent<EnemyAttack> ().off = true;
+			if(Drop != null)
+				Drop.DropObject ();
 			Destroy (gameObject, 3.0f);
 		}
 	}
