@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6e90ce8e232cdb141b036f2d66308591
+timeCreated: 1496956025
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Audiowide
+  fontNames:
+  - Audiowide
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 321769c5f5273114db68c7c9fd1dd835, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
