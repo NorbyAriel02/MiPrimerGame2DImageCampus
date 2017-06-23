@@ -1,15 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuSelectionLevelController : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
+	public Button BtnLevel01;
+	public Button BtnLevel02;
+	void Awake () {
+		BtnLevel01.onClick.AddListener (ClickBtnLevel01);
+		BtnLevel02.onClick.AddListener (ClickBtnLevel02);
 	}
-	
-	// Update is called once per frame
+
+	void ClickBtnLevel01()
+	{
+		SceneManager.LoadScene ("Nivel01");
+	}
+
+	void ClickBtnLevel02()
+	{
+		SceneManager.LoadScene ("Nivel02");
+	}
+
 	void Update () {
 		
 	}

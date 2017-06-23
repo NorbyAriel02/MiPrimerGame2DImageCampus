@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour {
 	public Transform transformParticles;
 	public Vector3 PositionParticlesRight;
 	public Vector3 PositionParticlesLeft;
+	public GameObject LineFireFX;
 	//Variables privadas
 	private Rigidbody2D rbPlayer;
 	private SpriteRenderer PlayerSR;
@@ -44,13 +45,11 @@ public class PlayerMove : MonoBehaviour {
 	void AnimatorPlayer(float move, float jump)
 	{
 		if (move != 0 && jump == 0) {
-			//Debug.Log ("Esta caminando");
 			AnimPlayer.SetBool("IsWalking", true);
 		} else if (jump != 0) {
 			AnimPlayer.SetTrigger ("IsJumping");
 		}
 		else {
-			//Debug.Log ("No camina "+ jump);
 			AnimPlayer.SetBool("IsWalking", false);
 		}
 	}
@@ -81,6 +80,7 @@ public class PlayerMove : MonoBehaviour {
 			SpawnBullets.localRotation = Quaternion.AngleAxis(0, new Vector3(0,0,1));
 			SpawnProjectile.localPosition = new Vector3 (0.8f, 0, 0);
 			SpawnProjectile.localRotation = Quaternion.AngleAxis(20, new Vector3(0,0,1));
+			LineFireFX.transform.localPosition = new Vector3 (0.4f, 0, -1);
 		} else if(!PlayerSR.flipX && move < 0)  {
 			PlayerSR.flipX = true;
 			transformParticles.localPosition = PositionParticlesLeft;
@@ -88,6 +88,7 @@ public class PlayerMove : MonoBehaviour {
 			SpawnBullets.localRotation = Quaternion.AngleAxis(180, new Vector3(0,1,0));
 			SpawnProjectile.localPosition = new Vector3 (-0.8f, 0, 0);
 			SpawnProjectile.localRotation = Quaternion.AngleAxis(180, new Vector3(0.18f,1,0));
+			LineFireFX.transform.localPosition = new Vector3 (-3.4f, 0, -1);
 		}
 	}
 
