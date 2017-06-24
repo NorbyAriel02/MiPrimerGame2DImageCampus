@@ -67,6 +67,9 @@
      <Compile Include="Assets\Asset2D\Scripts\ScoreShadow.cs" />
      <Compile Include="Assets\Asset2D\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Asset2D\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Enemies\ActiveEnemy02.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy02Attack.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy02Move.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy03Attack.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyFlip.cs" />

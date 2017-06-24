@@ -32,24 +32,20 @@ public class ProjectileController : MonoBehaviour {
 		foreach (Collider2D hit in colliders) {	
 			if (hit.isTrigger)
 				continue;
+
 			Rigidbody2D rb = hit.GetComponent<Rigidbody2D> ();
 			EnemyHealth enemyHealth = hit.GetComponent<EnemyHealth> ();//shootHit.collider.GetComponent <EnemyHealth> ();
 			PlayerHealth2D playerHealth = hit.GetComponent<PlayerHealth2D>();
-			if (rb != null) {
+
+			if (rb != null)
 				rb.AddForce (hit.transform.right*powerExplosion);
-			}
-
+			
 			if(enemyHealth != null)
-			{
-				//enemyHealth.TakeDamage (damagePerShot, shootHit.point);
-				Debug.Log (hit.name);
 				enemyHealth.TakeDamage (damagePerShot);
-			}
-
-			if (playerHealth != null) {
-				Debug.Log (hit.name);
+			
+			if (playerHealth != null)
 				playerHealth.TakeDamage (damagePerShot);
-			}
+
 		}
 		Destroy (gameObject);
 	}

@@ -7,7 +7,7 @@ public class PlayerAttack02 : MonoBehaviour {
 	public int damagePerShot = 20;
 	public float timeBetweenBullets = 0.15f;
 	public float range = 100f;
-	public Transform Sight;
+	public Transform SpawnBullets;
 	public ParticleSystem gunParticles;
 	public GameObject gunLine;
 
@@ -64,8 +64,8 @@ public class PlayerAttack02 : MonoBehaviour {
 
 		gunLine.SetActive(true);
 		//gunLine.SetPosition (0, transform.position);
-		Vector2 origen = new Vector2(Sight.position.x, Sight.position.y);
-		Vector3 dir = Sight.right;
+		Vector2 origen = new Vector2(SpawnBullets.position.x, SpawnBullets.position.y);
+		Vector3 dir = SpawnBullets.right;
 		Vector2 direccion = new Vector2 (dir.x, dir.y);
 		RaycastHit2D shootHit = Physics2D.Raycast (origen, direccion, range);
 

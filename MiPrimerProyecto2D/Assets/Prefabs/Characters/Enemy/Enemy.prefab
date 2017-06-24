@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 95650894064427132}
   - component: {fileID: 114631551533526894}
   - component: {fileID: 114076777227899094}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4581185760880260}
   - component: {fileID: 61365725580615698}
   - component: {fileID: 114513879125689168}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerSensorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 4322490450641052}
   - component: {fileID: 61095901550267746}
   - component: {fileID: 114784665349893758}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TriggerSensorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 249d155548bf9e748bf37fe00419be54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Projectile: {fileID: 0}
+  SpawnProjectile: {fileID: 0}
+  moveSpeed: 0
+  rotationSpeed: 0
   timer: 4
+  AttackDistance: 15
+  timeBetweenBullets: 2
+  off: 0
 --- !u!114 &114513879125689168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,7 +228,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74c8013156023c43ad4d227b722b6c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armor: 0
   health: 100
+  gameController: {fileID: 0}
+  TypeEnemy: 1
+  ScorePoints: 20
 --- !u!114 &114704881076498432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +247,8 @@ MonoBehaviour:
   rangeRound: 4
   resetRound: 20
   SmoothLerp: 0.1
+  off: 0
+  SpawnProjectile: {fileID: 0}
 --- !u!114 &114784665349893758
 MonoBehaviour:
   m_ObjectHideFlags: 1

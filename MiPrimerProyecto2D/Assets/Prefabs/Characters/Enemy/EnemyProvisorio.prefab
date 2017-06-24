@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4638492720965698}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: spawnProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 114216444004607524}
   - component: {fileID: 114061614994892784}
   - component: {fileID: 114995248871179178}
-  m_Layer: 0
+  - component: {fileID: 114969227293644096}
+  m_Layer: 14
   m_Name: EnemyProvisorio
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1941870281106964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.16, y: 8.06, z: 0}
+  m_LocalPosition: {x: 15.16, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4638492720965698}
@@ -136,8 +137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74c8013156023c43ad4d227b722b6c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armor: 0
   health: 100
   gameController: {fileID: 0}
+  TypeEnemy: 1
+  ScorePoints: 20
 --- !u!114 &114216444004607524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +171,7 @@ MonoBehaviour:
   timer: 0.5
   AttackDistance: 15
   timeBetweenBullets: 2
+  off: 0
 --- !u!114 &114535894779166560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,9 +184,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rangeRound: 4
-  resetRound: 20
+  resetRound: 10
   SmoothLerp: 0.1
+  off: 0
   SpawnProjectile: {fileID: 4638492720965698}
+--- !u!114 &114969227293644096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1941870281106964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6789e84092c7d8647a3b5a81fda40300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prop: {fileID: 1585342555580596, guid: d8879a94cf7a62d4fa309d4a6325e6fa, type: 2}
 --- !u!114 &114995248871179178
 MonoBehaviour:
   m_ObjectHideFlags: 1
