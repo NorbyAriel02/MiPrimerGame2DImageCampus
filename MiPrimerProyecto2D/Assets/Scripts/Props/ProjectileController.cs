@@ -8,8 +8,11 @@ public class ProjectileController : MonoBehaviour {
 	public float radiusExplosion;
 	public float damagePerShot = 50;
 	public GameObject ParticleExplosion;
+	public AudioSource AudioSourceExplosion;
+	public SpriteRenderer SRGrenade;
+	public float timer = 2.0f;
 	//Private variable
-	private float timer = 3.0f;
+
 
 	void Awake()
 	{		
@@ -30,9 +33,9 @@ public class ProjectileController : MonoBehaviour {
 
 		Collider2D[] colliders = Physics2D.OverlapCircleAll (explosionPos, radiusExplosion);
 		foreach (Collider2D hit in colliders) {	
-			if (hit.isTrigger)
+			if (hit.isTrigger || hit.tag == "Grenade")
 				continue;
-
+			
 			Rigidbody2D rb = hit.GetComponent<Rigidbody2D> ();
 			EnemyHealth enemyHealth = hit.GetComponent<EnemyHealth> ();//shootHit.collider.GetComponent <EnemyHealth> ();
 			PlayerHealth2D playerHealth = hit.GetComponent<PlayerHealth2D>();
@@ -46,8 +49,12 @@ public class ProjectileController : MonoBehaviour {
 			if (playerHealth != null)
 				playerHealth.TakeDamage (damagePerShot);
 
+			SRGrenade.sprite = null;
+			AudioSourceExplosion.Play ();
 		}
-		Destroy (gameObject);
+
+		Destroy (gameObject, AudioSourceExplosion.clip.length);
+		this.enabled = false;
 	}
 
 	void OnCollisionEnter2D(Collision2D other)

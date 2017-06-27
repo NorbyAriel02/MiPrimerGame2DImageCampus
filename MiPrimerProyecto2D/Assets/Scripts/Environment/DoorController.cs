@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour {
 	public Sprite DoorOpen;
+	public AudioSource doorOpenAudio;
 	private PlayerInventory Inventory;
+
 	void Awake () {
 		GameObject go = GameObject.FindGameObjectWithTag ("Player");
 		Inventory = go.GetComponent<PlayerInventory> ();
@@ -23,6 +25,7 @@ public class DoorController : MonoBehaviour {
 				gameObject.GetComponent<BoxCollider2D> ().isTrigger = true;
 				Inventory.SetElement ("key", -1);
 				this.enabled = false;	
+				doorOpenAudio.Play ();
 			}
 		}
 	}

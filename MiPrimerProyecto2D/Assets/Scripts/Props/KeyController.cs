@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyController : MonoBehaviour {
+	public AudioSource ASHasKey;
 	private PlayerInventory Inventory;
-	// Use this for initialization
 	void Awake () {
 		GameObject go = GameObject.FindGameObjectWithTag ("Player");
 		Inventory = go.GetComponent<PlayerInventory> ();
@@ -18,9 +18,10 @@ public class KeyController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Player") {
-			Destroy (gameObject);
+			ASHasKey.Play ();
 			Inventory.HasKey = true;
 			Inventory.SetElement ("key", 1);
+			Destroy (gameObject, ASHasKey.clip.length);
 		}
 	}
 }

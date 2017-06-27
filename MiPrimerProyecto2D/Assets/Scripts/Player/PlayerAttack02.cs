@@ -72,8 +72,7 @@ public class PlayerAttack02 : MonoBehaviour {
 		if (shootHit.collider != null) {
 			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
 			if(enemyHealth != null)
-			{
-				//enemyHealth.TakeDamage (damagePerShot, shootHit.point);
+			{				
 				enemyHealth.TakeDamage (damagePerShot);
 				hit++;
 			}

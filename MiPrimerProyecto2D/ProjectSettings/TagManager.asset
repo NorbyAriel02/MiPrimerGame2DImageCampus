@@ -16,6 +16,7 @@ TagManager:
   - Fire
   - Armor
   - key
+  - Grenade
   layers:
   - Default
   - TransparentFX

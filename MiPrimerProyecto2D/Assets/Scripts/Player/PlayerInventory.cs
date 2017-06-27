@@ -15,12 +15,15 @@ public class PlayerInventory : MonoBehaviour {
 	{
 		Inventory =  new Dictionary<string, int>();
 		Inventory.Add("key", 0);
-		Inventory.Add("weapon02", 0);
+		Inventory.Add("weapon02", 1);
 		ImgInvetoryWeapons [1].color = new Color (0, 0, 0, 0);
 		GameObject GO = GameObject.FindGameObjectWithTag ("Player");
 		//pequeño error al crear los scripts inverti los numeros
 		Attack01 = GO.GetComponent<PlayerAttack02> ();
 		Attack02 = GO.GetComponent<PlayerAttack> ();
+		if (Inventory ["weapon02"] > 0)
+			ShowWeapon02 ();
+
 	}
 
 	void Start () {

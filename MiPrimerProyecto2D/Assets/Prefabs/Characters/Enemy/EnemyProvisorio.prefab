@@ -170,7 +170,7 @@ MonoBehaviour:
   rotationSpeed: 0.5
   timer: 0.5
   AttackDistance: 15
-  timeBetweenBullets: 2
+  timeBetweenBullets: 4
   off: 0
 --- !u!114 &114535894779166560
 MonoBehaviour:

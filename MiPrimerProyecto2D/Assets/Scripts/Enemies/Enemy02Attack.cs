@@ -9,6 +9,7 @@ public class Enemy02Attack : MonoBehaviour {
 	public Transform SpawnBullets;//cuando el player hace el flip tengo que cambiar la posicion del spawn
 	public ParticleSystem Particles;
 	public GameObject LineFireFX;	
+	public AudioSource ASFire;
 	//private variable
 	private Animator anim;
 	private float timer = 0;
@@ -34,7 +35,6 @@ public class Enemy02Attack : MonoBehaviour {
 		{
 			DisableEffects ();
 		}
-
 	}
 
 	public void DisableEffects ()
@@ -46,8 +46,9 @@ public class Enemy02Attack : MonoBehaviour {
 	void Shoot ()
 	{
 		timer = 0f;
-		Debug.Log (timeBetweenBullets * effectsDisplayTime);
-		Debug.Log (timeBetweenBullets * 0.1);
+		if(!ASFire.isPlaying)
+			ASFire.Play ();
+		
 		Particles.Stop ();
 		Particles.Play ();
 		LineFireFX.SetActive(true);

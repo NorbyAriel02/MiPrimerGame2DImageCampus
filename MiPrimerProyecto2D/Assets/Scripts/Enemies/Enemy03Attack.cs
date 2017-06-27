@@ -18,6 +18,7 @@ public class Enemy03Attack : MonoBehaviour
 	public Vector3 PositionLineRanderRight;
 	public Vector3 PositionLineRanderLeft;
 	public GameObject LineFireFX;	
+	public AudioSource ASFire;
 	//private variable
 	private Animator Anim;
 	private EnemyHealth Defending;
@@ -130,7 +131,7 @@ public class Enemy03Attack : MonoBehaviour
 	void Shoot ()
 	{
 		timer = 0f;
-
+		ASFire.Play ();
 		gunParticles.Stop ();
 		gunParticles.Play ();
 		LineFireFX.SetActive(true);
