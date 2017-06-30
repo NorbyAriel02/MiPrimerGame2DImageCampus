@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95002087778507390}
   - component: {fileID: 61432580218052442}
   - component: {fileID: 61102097708114590}
+  - component: {fileID: 61812296755091044}
   - component: {fileID: 114473359338644624}
   - component: {fileID: 114592465354229450}
   - component: {fileID: 82872586285536336}
@@ -114,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340859815580498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1600001, y: 0.060000002, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4966231262419424}
@@ -164,6 +165,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1}
+--- !u!61 &61812296755091044
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340859815580498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5}
 --- !u!82 &82872586285536336
 AudioSource:
   m_ObjectHideFlags: 1
@@ -231,7 +246,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -288,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae5a5633ff8380419eea12bbbcfc2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsOff: 0
   timeBetweenBullets: 0.5
   damagePerShot: 5
   ChangeoverTime: 10

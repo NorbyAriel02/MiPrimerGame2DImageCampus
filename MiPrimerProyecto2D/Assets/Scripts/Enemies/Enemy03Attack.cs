@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class Enemy03Attack : MonoBehaviour 
 {
+	public bool ActiveAudio;
 	public float timeBetweenBullets = 0.5f;
 	public float damagePerShot = 5;		
 	public float ChangeoverTime = 10;
 	public float Range = 3;
 	public ParticleSystem gunParticles;
-	public Transform SpawnBullets;//cuando el player hace el flip tengo que cambiar la posicion del spawn
+	public Transform SpawnBullets;
 	public Transform transformParticles;
 	public Vector3 PositionParticlesRight;
 	public Vector3 PositionParticlesLeft;
@@ -38,10 +39,11 @@ public class Enemy03Attack : MonoBehaviour
 		isHiddenTime = ChangeoverTime;
 		isTimeAttacking = ChangeoverTime;
 		EnemySR = GetComponent<SpriteRenderer> ();
+		ActiveAudio = false;
 	}
 
 	void Update()
-	{
+	{			
 		timer += Time.deltaTime;
 		if(isAttackReady() && timer >= timeBetweenBullets)
 		{
@@ -131,7 +133,8 @@ public class Enemy03Attack : MonoBehaviour
 	void Shoot ()
 	{
 		timer = 0f;
-		ASFire.Play ();
+		if(ActiveAudio)
+			ASFire.Play ();
 		gunParticles.Stop ();
 		gunParticles.Play ();
 		LineFireFX.SetActive(true);

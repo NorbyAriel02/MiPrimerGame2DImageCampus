@@ -1,12 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Props\KeyController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemies\Enemy03Attack.cs">
     <Files>
-      <File FileName="Assets\Scripts\Props\KeyController.cs" Line="23" Column="21" />
+      <File FileName="Assets\Scripts\Player\PlayerMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerAttack02.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemies\EnemyAttack.cs" Line="72" Column="19" />
+      <File FileName="Assets\Scripts\Enemies\Enemy03Attack.cs" Line="145" Column="19" />
+      <File FileName="Assets\Scripts\Enemies\ActiveEnemy03.cs" Line="17" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Assets\Scripts\Enemies\Enemy03Attack.cs" line="151" column="43" />
+      <Breakpoint file="C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Assets\Scripts\Enemies\Enemy03Attack.cs" line="145" column="19" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
