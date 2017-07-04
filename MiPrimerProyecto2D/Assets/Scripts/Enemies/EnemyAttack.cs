@@ -18,6 +18,7 @@ public class EnemyAttack : MonoBehaviour {
 	private GameObject Player;
 	private Transform target;
 	private EnemyFlip enemyFlip;
+	private EnemyAnimController anim;
 
 	void Awake()
 	{
@@ -25,7 +26,7 @@ public class EnemyAttack : MonoBehaviour {
 		target = Player.transform;
 		EnemySR = GetComponent<SpriteRenderer> ();
 		enemyFlip = GetComponent<EnemyFlip> ();
-		//gameObject.transform.LookAt (Player.transform);
+		anim = GetComponent<EnemyAnimController> ();
 	}
 
 	// Use this for initialization
@@ -47,13 +48,15 @@ public class EnemyAttack : MonoBehaviour {
 		}
 
 		if (Vector3.Distance (target.position, transform.position) > 3) {
+			anim.SetWalk ();
 			Vector3 Direction = (target.position - transform.position).normalized;
 			Vector3 NewDirection = new Vector3 (Direction.x, 0, 0);
 			transform.position += NewDirection * moveSpeed * Time.deltaTime;
 		}
 
-		if (Vector3.Distance (target.position, transform.position) < AttackDistance && timer < 0)
-			Fire ();
+		if (Vector3.Distance (target.position, transform.position) < AttackDistance && timer < 0) {
+			anim.SetAttack ();
+		}
 		
 	}
 
@@ -77,5 +80,6 @@ public class EnemyAttack : MonoBehaviour {
 	{
 		timer = timeBetweenBullets;
 		Instantiate (Projectile, SpawnProjectile.position, SpawnProjectile.rotation);
+		anim.SetIdle ();
 	}
 }

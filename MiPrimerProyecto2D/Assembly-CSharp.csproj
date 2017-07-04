@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Enemies\Enemy02Attack.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy02Move.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy03Attack.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyAnimController.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyAudioController.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyFlip.cs" />

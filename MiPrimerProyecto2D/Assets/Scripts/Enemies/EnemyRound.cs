@@ -15,6 +15,7 @@ public class EnemyRound : MonoBehaviour {
 	private float timer;
 	private bool flip = false;
 	private Animator EnemyAnim;
+	private EnemyAnimController anim;
 	private bool HastaArreglarAnim = true;
 	private EnemyFlip enemyFlip;
 	void Awake()
@@ -26,7 +27,7 @@ public class EnemyRound : MonoBehaviour {
 		FinalPos = ToPos;
 
 		timer = 0.0f;
-		//EnemyAnim = GetComponentInChildren<Animator> ();	
+		anim = GetComponent<EnemyAnimController> ();
 		enemyFlip = GetComponent<EnemyFlip> ();
 	}
 
@@ -42,7 +43,7 @@ public class EnemyRound : MonoBehaviour {
 	{
 		timer += Time.deltaTime;
 
-		if (HastaArreglarAnim /*EnemyAnim.GetBool ("IsWalking")*/) {			
+		if (anim.IsWalk()) {			
 			transform.position = Vector3.Lerp (FromPos, ToPos, timer * SmoothLerp);
 		} 
 
@@ -54,15 +55,15 @@ public class EnemyRound : MonoBehaviour {
 
 		if (transform.position == ToPos) 
 		{
-			HastaArreglarAnim = false;
-			//EnemyAnim.SetBool ("IsWalking", false);
+			//HastaArreglarAnim = false;
+			anim.SetIdle ();
 		}
 
 		if (timer >= resetRound) {
 			flip = true;
 
-			//EnemyAnim.SetBool ("IsWalking", true);
-			HastaArreglarAnim = true;
+			anim.SetWalk ();
+			//HastaArreglarAnim = true;
 
 			FinalPos = FromPos;
 			FromPos = ToPos;

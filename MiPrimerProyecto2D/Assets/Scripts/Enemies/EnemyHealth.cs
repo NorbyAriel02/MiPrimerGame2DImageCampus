@@ -12,13 +12,15 @@ public class EnemyHealth : MonoBehaviour {
 	//variable private
 	private HUDcontroller hud;
 	private DroppedObject Drop;
-
+	private EnemyAnimController anim;
 	//private Animator Anim;
 	void Awake()
 	{
 		//Anim = GetComponent<Animator> ();
 		hud = gameController.GetComponent<HUDcontroller>();
 		Drop = GetComponent<DroppedObject> ();
+		anim = GetComponent<EnemyAnimController> ();
+
 	}
 
 	public void TakeDamage(float danger)
@@ -28,11 +30,11 @@ public class EnemyHealth : MonoBehaviour {
 
 
 		if (this.health > 0) {
-			//Anim.SetTrigger ("IsHit");
+			anim.SetHit ();
 		}
 		else 
 		{
-			//Anim.SetTrigger ("IsDie");
+			anim.SetDie ();
 			DisableEnemy();			
 			if(Drop != null)
 				Drop.DropObject ();
