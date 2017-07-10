@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy02Move : MonoBehaviour {
 	public float Speed = 2;
+	public bool off = false;
 	// Use this for initialization
 	private Rigidbody2D EnemyRB;
 	void Start () {
@@ -12,6 +13,11 @@ public class Enemy02Move : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (off) {
+			EnemyRB.velocity = Vector2.zero;
+			return; 
+		}
+		
 		Move ();
 	}
 

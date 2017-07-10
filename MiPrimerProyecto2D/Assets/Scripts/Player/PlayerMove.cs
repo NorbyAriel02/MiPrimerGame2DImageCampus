@@ -78,10 +78,13 @@ public class PlayerMove : MonoBehaviour {
 		newScale.x = move > 0 ? 1 : -1;
 		transform.localScale = newScale;
 
-		if (move > 0)
-			SpawnProjectile.localRotation =  Quaternion.AngleAxis(20, new Vector3(0,0,1));
-		else
-			SpawnProjectile.localRotation = Quaternion.AngleAxis(180, new Vector3(-0.18f,1,0));
+		if (move > 0) {
+			SpawnProjectile.localRotation = Quaternion.AngleAxis (20, new Vector3 (0, 0, 1));
+			SpawnBullets.localRotation = Quaternion.AngleAxis (0, new Vector3 (0, 1, 0));
+		} else {
+			SpawnBullets.localRotation = Quaternion.AngleAxis (180, new Vector3 (0, 1, 0));
+			SpawnProjectile.localRotation = Quaternion.AngleAxis (180, new Vector3 (-0.18f, 1, 0));
+		}
 	}
 
 	void OnCollisionStay2D(Collision2D other)

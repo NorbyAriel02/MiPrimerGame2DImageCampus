@@ -10,6 +10,7 @@ public class Enemy02Attack : MonoBehaviour {
 	public ParticleSystem Particles;
 	public GameObject LineFireFX;	
 	public AudioSource ASFire;
+	public bool off = false;
 	//private variable
 	private Animator anim;
 	private float timer = 0;
@@ -25,6 +26,9 @@ public class Enemy02Attack : MonoBehaviour {
 
 	void Update()
 	{
+		if (off)
+			return;
+
 		timer += Time.deltaTime;
 		if(timer >= timeBetweenBullets)
 		{

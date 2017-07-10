@@ -56,6 +56,7 @@ public class EnemyAttack : MonoBehaviour {
 
 		if (Vector3.Distance (target.position, transform.position) < AttackDistance && timer < 0) {
 			anim.SetAttack ();
+			Fire ();
 		}
 		
 	}

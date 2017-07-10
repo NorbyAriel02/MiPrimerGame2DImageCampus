@@ -38,6 +38,8 @@ public class EnemyAnimController : MonoBehaviour {
 
 	public void SetDie()
 	{
+		anim.SetBool("IsWalk", false);
+		anim.SetBool("IsAttack", false);
 		anim.SetBool("IsDie", true);
 	}
 
