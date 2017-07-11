@@ -11,17 +11,16 @@ public class Enemy02Attack : MonoBehaviour {
 	public GameObject LineFireFX;	
 	public AudioSource ASFire;
 	public bool off = false;
+	public float effectsDisplayTime = 0.2f;
 	//private variable
-	private Animator anim;
+	//private Animator anim;
 	private float timer = 0;
-	private Transform PlayerPosition;
-	private float effectsDisplayTime = 0.2f;
+
 
 	void Awake()
 	{
-		anim = GetComponent<Animator>();
-		GameObject Player = GameObject.FindGameObjectWithTag ("Player");
-		PlayerPosition = Player.transform;
+		//anim = GetComponent<Animator>();
+		//GameObject Player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
 	void Update()

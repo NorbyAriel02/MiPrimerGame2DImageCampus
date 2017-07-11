@@ -14,7 +14,6 @@ public class PlayerMove : MonoBehaviour {
 	public GameObject LineFireFX;
 	//Variables privadas
 	private Rigidbody2D rbPlayer;
-	private SpriteRenderer PlayerSR;
 	private bool IsJump;
 	private Animator AnimPlayer;
 
@@ -23,7 +22,6 @@ public class PlayerMove : MonoBehaviour {
 	{
 		AnimPlayer = GetComponent<Animator> ();
 		rbPlayer = GetComponent<Rigidbody2D> ();
-		PlayerSR = GetComponent<SpriteRenderer> ();
 		IsJump = false;
 	}
 

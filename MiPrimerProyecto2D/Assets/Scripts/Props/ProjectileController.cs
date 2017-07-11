@@ -53,7 +53,7 @@ public class ProjectileController : MonoBehaviour {
 			AudioSourceExplosion.Play ();
 		}
 
-		Destroy (gameObject, AudioSourceExplosion.clip.length);
+		Destroy (gameObject);
 		this.enabled = false;
 	}
 

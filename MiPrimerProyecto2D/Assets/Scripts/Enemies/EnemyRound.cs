@@ -16,7 +16,6 @@ public class EnemyRound : MonoBehaviour {
 	private bool flip = false;
 	private Animator EnemyAnim;
 	private EnemyAnimController anim;
-	private bool HastaArreglarAnim = true;
 	private EnemyFlip enemyFlip;
 	void Awake()
 	{

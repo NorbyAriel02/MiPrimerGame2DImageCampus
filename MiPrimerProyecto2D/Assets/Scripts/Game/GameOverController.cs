@@ -2,18 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverController : MonoBehaviour {
+	public Button menu;
+	public Button Game;
 
-	private float timer;
+
 	void Start () {
-		timer = 5.0f;
+		menu.onClick.AddListener (GoMenu);
+		Game.onClick.AddListener (GoGame);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		timer -= Time.deltaTime;
-		if (timer < 0)
-			SceneManager.LoadScene ("Nivel01");
+	}
+
+	void GoGame()
+	{
+		SceneManager.LoadScene ("MenuSeleccionNiveles");
+	}
+
+	void GoMenu()
+	{
+		SceneManager.LoadScene ("MenuPrincipal");
 	}
 }

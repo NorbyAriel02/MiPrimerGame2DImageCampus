@@ -13,6 +13,7 @@ public class MenuPrincipalController : MonoBehaviour {
 	void Awake()
 	{
 		play.onClick.AddListener (OnPlay);
+		Exit.onClick.AddListener (GoExit);
 	}
 
 	public void OnPlay()
@@ -20,4 +21,9 @@ public class MenuPrincipalController : MonoBehaviour {
 		SceneManager.LoadScene ("MenuSeleccionNiveles");
 	}
 
+	void GoExit()
+	{
+		Debug.Log ("Exit");
+		Application.Quit ();
+	}
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroController : MonoBehaviour {
 	public GameObject Brick;
@@ -10,6 +11,7 @@ public class IntroController : MonoBehaviour {
 	private Vector3 FromPos;
 	private Vector3 ToPos;
 	private Vector3 FinalPos;
+	private float exitTime = 10;
 	//private float[,] matrixCartel;
 	private GameObject cloneBrick = null;
 	private float Acumulador = 0;
@@ -21,6 +23,11 @@ public class IntroController : MonoBehaviour {
 	}
 
 	void Update () {		
+		GoIntro ();
+	}
+
+	void GoIntro()
+	{
 		if (Timer > 1) 
 		{
 			cloneBrick = Instantiate (Brick, FromPos, Quaternion.identity);
@@ -32,8 +39,12 @@ public class IntroController : MonoBehaviour {
 		}
 
 		Timer += Time.deltaTime;
+		exitTime -= Time.deltaTime;
 
 		if(cloneBrick != null)
 			cloneBrick.transform.position = Vector3.Lerp (FromPos, ToPos, Timer * speed);
+
+		if (exitTime <= 0)
+			SceneManager.LoadScene ("MenuPrincipal");
 	}
 }
