@@ -19,7 +19,7 @@ public class MenuSelectionLevelController : MonoBehaviour {
 
 	void ClickBtnLevel02()
 	{
-		SceneManager.LoadScene ("Nivel02");
+		SceneManager.LoadScene ("MenuPrincipal");
 	}
 
 	void Update () {

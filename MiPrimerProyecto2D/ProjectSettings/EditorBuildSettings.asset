@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuSeleccionNiveles.unity
   - enabled: 1
     path: Assets/Scenes/Nivel01.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel02.unity
   - enabled: 1
     path: Assets/Scenes/Win.unity

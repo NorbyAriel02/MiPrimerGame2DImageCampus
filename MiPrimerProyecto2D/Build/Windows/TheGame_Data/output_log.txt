@@ -1,0 +1,84 @@
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [igdumd32.dll 9.17.10.4459]
+    Renderer: Intel(R) HD Graphics 3000
+    Vendor:   Intel
+    VRAM:     848 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 INTZ=1 NULL=1 RESZ=1 SlowINTZ=0 ATOC=1 BC4=1 BC5=1
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.044 seconds
+Platform assembly: C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\ariel\Desktop\Curso_unity3d\_miPrimerProyecto2D\MiPrimerProyecto2D\Build\Windows\TheGame_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 50Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 5.552074 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.541385 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 357.
+Total: 0.266282 ms (FindLiveObjects: 0.029586 ms CreateObjectMapping: 0.021779 ms MarkObjects: 0.208752 ms  DeleteObjects: 0.005342 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.420792 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1241.
+Total: 0.559275 ms (FindLiveObjects: 0.115060 ms CreateObjectMapping: 0.046435 ms MarkObjects: 0.388739 ms  DeleteObjects: 0.007807 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.738436 ms
+
+Unloading 145 unused Assets to reduce memory usage. Loaded Objects now: 364.
+Total: 0.660364 ms (FindLiveObjects: 0.032052 ms CreateObjectMapping: 0.024655 ms MarkObjects: 0.207108 ms  DeleteObjects: 0.395725 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.537085 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 357.
+Total: 0.651323 ms (FindLiveObjects: 0.069036 ms CreateObjectMapping: 0.077665 ms MarkObjects: 0.469692 ms  DeleteObjects: 0.032874 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.415039 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1241.
+Total: 0.527634 ms (FindLiveObjects: 0.118758 ms CreateObjectMapping: 0.035750 ms MarkObjects: 0.365727 ms  DeleteObjects: 0.006574 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.292577 ms
+
+Unloading 147 unused Assets to reduce memory usage. Loaded Objects now: 346.
+Total: 1.882059 ms (FindLiveObjects: 0.171357 ms CreateObjectMapping: 0.063694 ms MarkObjects: 0.718716 ms  DeleteObjects: 0.926646 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.861309 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 357.
+Total: 0.649680 ms (FindLiveObjects: 0.058762 ms CreateObjectMapping: 0.059995 ms MarkObjects: 0.489006 ms  DeleteObjects: 0.040271 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.382164 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 381.
+Total: 0.760631 ms (FindLiveObjects: 0.138072 ms CreateObjectMapping: 0.046024 ms MarkObjects: 0.562563 ms  DeleteObjects: 0.011506 ms)
+
+Exit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2040 -> priority: 1 
