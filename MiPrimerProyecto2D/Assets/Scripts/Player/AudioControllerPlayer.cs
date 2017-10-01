@@ -13,10 +13,11 @@ public class AudioControllerPlayer : MonoBehaviour {
 	private float timerWalk;
 	private float timerShoot;
 	private float timeBetweenBullets;
-
+	private PlayerMove playerMove;
 	void Awake()
 	{
 		timeBetweenBullets = GetComponent<PlayerAttack02> ().timeBetweenBullets;
+		playerMove = GetComponent<PlayerMove> ();
 		timerWalk = AudioSpeedWalk;
 	}
 
@@ -31,12 +32,13 @@ public class AudioControllerPlayer : MonoBehaviour {
 
 		if (anim.GetBool ("IsJumping") ) {
 			AudioSourcePlayer.clip = JumpClip;
-			AudioSourcePlayer.Play ();
+			if(!AudioSourcePlayer.isPlaying && !playerMove.IsJump)
+				AudioSourcePlayer.Play ();
 		}
 
 		timerShoot += Time.deltaTime;
 
-		if(Input.GetKey (KeyCode.LeftControl) && timerShoot >= timeBetweenBullets)
+		if(Input.GetKeyDown (KeyCode.LeftControl) && timerShoot >= timeBetweenBullets)
 		{
 			AudioSourcePlayer.clip = FireClip;
 			AudioSourcePlayer.Play ();

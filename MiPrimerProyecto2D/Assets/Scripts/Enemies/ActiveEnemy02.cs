@@ -19,7 +19,7 @@ public class ActiveEnemy02 : MonoBehaviour {
 		if(other.gameObject.tag == "Player")
 		{			
 			Enemy02.SetActive (true);
-			this.enabled = false;
+			gameObject.SetActive (false);
 		}
 	}
 }

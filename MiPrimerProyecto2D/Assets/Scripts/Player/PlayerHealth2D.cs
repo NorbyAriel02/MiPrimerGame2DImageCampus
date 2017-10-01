@@ -17,6 +17,14 @@ public class PlayerHealth2D : MonoBehaviour {
 		game = gameController.GetComponent<GameController> ();
 	}
 
+	void OnCollisionEnter2D (Collision2D col)
+	{
+		// If the colliding gameobject is an Enemy...
+		if (col.gameObject.tag == "Enemy") {
+			TakeDamage (100.0f);
+		}
+	}
+
 	public void TakeDamage(float danger)
 	{
 		hud.damaged = true;

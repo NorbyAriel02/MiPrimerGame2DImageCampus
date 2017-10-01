@@ -8,8 +8,9 @@ public class GameOverController : MonoBehaviour {
 	public Button menu;
 	public Button Game;
 
-
+    private string level;
 	void Start () {
+        level = PlayerPrefs.GetString("CurrentLevel");
 		menu.onClick.AddListener (GoMenu);
 		Game.onClick.AddListener (GoGame);
 	}
@@ -20,7 +21,7 @@ public class GameOverController : MonoBehaviour {
 
 	void GoGame()
 	{
-		SceneManager.LoadScene ("MenuSeleccionNiveles");
+		SceneManager.LoadScene (level);
 	}
 
 	void GoMenu()

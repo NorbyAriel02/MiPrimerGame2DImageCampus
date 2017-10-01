@@ -14,6 +14,17 @@ public class KeyController : MonoBehaviour {
 	void Update () {
 		
 	}
+	/*
+	void OnTriggerEnter2D(Collider2D other)
+	{        
+		if(other.gameObject.tag == "Player")
+		{			
+			ASHasKey.Play ();
+			Inventory.HasKey = true;
+			Inventory.SetElement ("key", 1);
+			Destroy (gameObject, ASHasKey.clip.length);
+		}
+	}*/
 
 	void OnCollisionEnter2D(Collision2D other)
 	{

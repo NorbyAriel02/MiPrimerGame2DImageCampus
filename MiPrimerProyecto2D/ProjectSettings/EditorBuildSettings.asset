@@ -7,17 +7,31 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/Level.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Intro.unity
+    guid: b780c051bfdba3540adbd5ed142eabf8
   - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
+    guid: 30610839e27e95b43810c4b931ce6a3e
   - enabled: 1
     path: Assets/Scenes/MenuSeleccionNiveles.unity
+    guid: d1d79ccc05afcaf41ad3ed3696196427
   - enabled: 1
-    path: Assets/Scenes/Nivel01.unity
-  - enabled: 0
-    path: Assets/Scenes/Nivel02.unity
+    path: Assets/Scenes/Nivel1.unity
+    guid: 10de07f2bdd49404ba34cbc9f34ed7f3
+  - enabled: 1
+    path: Assets/Scenes/Nivel2.unity
+    guid: 569cb45141340514f82a067a3a250046
+  - enabled: 1
+    path: Assets/Scenes/Nivel3.unity
+    guid: 2a521672c67a32c47abb098ac6cf6c7c
   - enabled: 1
     path: Assets/Scenes/Win.unity
+    guid: eb551ae9a2633ea4b92c7c5561e86d3c
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
+    guid: f56ce3f8f68b3164eade544c1a9f5dfa
+  - enabled: 1
+    path: Assets/Scenes/Controllers.unity
+    guid: 5117b052affc63948b843b21471c9616

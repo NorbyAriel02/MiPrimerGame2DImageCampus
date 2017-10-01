@@ -20,6 +20,7 @@ public class Enemy03Attack : MonoBehaviour
 	public Vector3 PositionLineRanderLeft;
 	public GameObject LineFireFX;	
 	public AudioSource ASFire;
+	public bool off = false;
 	//private variable
 	private Animator Anim;
 	private EnemyHealth Defending;
@@ -43,7 +44,10 @@ public class Enemy03Attack : MonoBehaviour
 	}
 
 	void Update()
-	{			
+	{		
+		if (off)
+			return;
+		
 		timer += Time.deltaTime;
 		if(isAttackReady() && timer >= timeBetweenBullets)
 		{

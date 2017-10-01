@@ -13,17 +13,19 @@ public class PlayerAttack : MonoBehaviour {
 	public Transform SpawnProjectile;
 	//private varible
 	private HUDcontroller hud;
+	private float timerBetweenShots;
 	void Awake()
 	{
 		hud = gameController.GetComponent<HUDcontroller>();
 		hud.SetBullets(Bullets);
 		hud.SetScore(0);
+		timerBetweenShots = TimeBetweenShots;
 	}
 
 	void Update()
 	{
-		TimeBetweenShots -= Time.deltaTime;
-		if(Input.GetKeyDown (KeyCode.LeftControl) && Bullets > 0 && TimeBetweenShots < 0)
+		timerBetweenShots -= Time.deltaTime;
+		if(Input.GetKeyDown (KeyCode.LeftControl) && Bullets > 0 && timerBetweenShots < 0)
 			Fire();
 	}
 
@@ -31,6 +33,7 @@ public class PlayerAttack : MonoBehaviour {
 	{
 		Instantiate (Projectile, SpawnProjectile.position, SpawnProjectile.rotation);
 		Bullets--;
+		timerBetweenShots = TimeBetweenShots;
 		hud.SetBullets(Bullets);
 	}
 
@@ -40,7 +43,15 @@ public class PlayerAttack : MonoBehaviour {
 		{
 			Bullets += other.gameObject.GetComponent<ArmorPack> ().Bullets;
 			hud.SetBullets(Bullets);
-			Destroy (other.gameObject);
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Armor") 
+		{
+			Bullets += other.gameObject.GetComponent<ArmorPack> ().Bullets;
+			hud.SetBullets(Bullets);
 		}
 	}
 }

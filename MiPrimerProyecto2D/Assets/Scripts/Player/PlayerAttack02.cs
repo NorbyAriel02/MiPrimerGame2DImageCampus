@@ -32,7 +32,7 @@ public class PlayerAttack02 : MonoBehaviour {
 	{
 		timer += Time.deltaTime;
 
-		if(Input.GetKey (KeyCode.LeftControl) && timer >= timeBetweenBullets)
+		if(Input.GetKeyDown (KeyCode.LeftControl) && timer >= timeBetweenBullets)
 		{
 			Shoot ();
 		}

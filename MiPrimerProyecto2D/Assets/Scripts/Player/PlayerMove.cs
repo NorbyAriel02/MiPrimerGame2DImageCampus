@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
-
 	public float Speed;
 	public float powerJump;
 	public Transform SpawnProjectile;
@@ -14,7 +13,7 @@ public class PlayerMove : MonoBehaviour {
 	public GameObject LineFireFX;
 	//Variables privadas
 	private Rigidbody2D rbPlayer;
-	private bool IsJump;
+	public bool IsJump;
 	private Animator AnimPlayer;
 
 
@@ -87,7 +86,7 @@ public class PlayerMove : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D other)
 	{
-		if (other.gameObject.tag == "ground" && other.contacts [0].normal.y == 1)
+		if (other.gameObject.tag == "ground" && other.contacts [0].normal.y > 0)
 			IsJump = false;
 	}
 

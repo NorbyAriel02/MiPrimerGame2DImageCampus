@@ -28,11 +28,18 @@ public class EnemyHealth : MonoBehaviour {
 		MakeDamage(danger);
 
 		if (this.health > 0) {
-			anim.SetHit ();
+			if(anim != null)
+				anim.SetHit ();
 		}
 		else 
 		{
-			anim.SetDie ();
+			if(anim != null)
+            {
+                anim.SetDie();
+                gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            }
+				
+			
 			DisableEnemy();			
 			if(Drop != null)
 				Drop.DropObject ();			
@@ -64,10 +71,13 @@ public class EnemyHealth : MonoBehaviour {
 		{
 			gameObject.GetComponent<Enemy02Move> ().off = true;
 			gameObject.GetComponent<Enemy02Attack> ().off = true;
+			Destroy (gameObject, 4);
 		}
 		else if(TypeEnemy == 3)
 		{
 			
+			gameObject.GetComponent<Enemy03Attack> ().off = true;
+			destroy ();
 		}
 	}
 }
